@@ -30,11 +30,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 	verifyButton.style.display="none";
 	main.appendChild(verifyButton);
 	
-	images.forEach(src => {
+	images.forEach((src,index) => {
 		const img=document.createElement('img');
 		img.src=src;
 		img.alt="Image";
-		img.classList.add('image');
+		img.classList.add('image', `img${index}`);
 		main.appendChild(img);
 
 		img.addEventListener('click',() => {
